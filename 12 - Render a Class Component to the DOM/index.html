@@ -80,12 +80,22 @@
             <div>
               <h1>Types of Food:</h1>
               {/* Change code below this line */}
-
+              <Fruits />
+              <Vegetables />
               {/* Change code above this line */}
             </div>
           );
         }
       }
+
+      /*
+      ReactDOM.render(<TypesOfFood />, document.getElementById('challenge-node'));
+      Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+      */
+
+      const container = document.getElementById("root");
+      const root = ReactDOM.createRoot(container);
+      root.render(<TypesOfFood />);
     </script>
     <!-- Render a Class Component to the DOM
 
