@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="challenge-node"></div>
+
+    <script type="text/babel">
+      const ShoppingCart = (props) => {
+        return (
+          <div>
+            <h1>Shopping Cart Component</h1>
+          </div>
+        );
+      };
+
+      // Change code below this line
+
+      const container = document.getElementById("challenge-node");
+      const root = ReactDOM.createRoot(container);
+      root.render(<ShoppingCart />);
+    </script>
+    <!-- Use Default Props
+
+React also has an option to set default props. You can assign default props to a component as a property on the component itself and React assigns the default prop if necessary. This allows you to specify what a prop value should be if no value is explicitly provided. For example, if you declare MyComponent.defaultProps = { location: 'San Francisco' }, you have defined a location prop that's set to the string San Francisco, unless you specify otherwise. React assigns default props if props are undefined, but if you pass null as the value for a prop, it will remain null.
+
+The code editor shows a ShoppingCart component. Define default props on this component which specify a prop items with a value of 0. -->
+  </body>
+</html>
