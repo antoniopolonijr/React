@@ -14,7 +14,29 @@
   <body>
     <div id="challenge-node"></div>
 
-    <script type="text/babel"></script>
+    <script type="text/babel">
+      class MyComponent extends React.Component {
+        constructor(props) {
+          super(props);
+        }
+        render() {
+          return (
+            <div>
+              <h1>My First React Component!</h1>
+            </div>
+          );
+        }
+      }
+
+      /*
+    ReactDOM.render(<TypesOfFood />, document.getElementById('challenge-node'));
+    Warning: ReactDOM.render is no longer supported in React 18. Use createRoot instead. Until you switch to the new API, your app will behave as if it's running React 17. Learn more: https://reactjs.org/link/switch-to-createroot
+    */
+
+      const container = document.getElementById("challenge-node");
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyComponent />);
+    </script>
     <!-- Write a React Component from Scratch
 
 Now that you've learned the basics of JSX and React components, it's time to write a component on your own. React components are the core building blocks of React applications so it's important to become very familiar with writing them. Remember, a typical React component is an ES6 class which extends React.Component. It has a render method that returns HTML (from JSX) or null. This is the basic form of a React component. Once you understand this well, you will be prepared to start building more complex React projects.
