@@ -26,6 +26,15 @@
           );
         }
       }
+
+      const Camper = (props) => {
+        return <p>{props.name}</p>;
+      };
+
+      Camper.propTypes = { name: PropTypes.string.isRequired };
+
+      Camper.defaultProps = { name: "CamperBot" };
+
       // Change code below this line
 
       const container = document.getElementById("challenge-node");
