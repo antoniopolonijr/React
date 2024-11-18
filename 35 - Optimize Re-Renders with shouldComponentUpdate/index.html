@@ -21,7 +21,7 @@
         shouldComponentUpdate(nextProps, nextState) {
           console.log("Should I update?");
           // Change code below this line
-          return true;
+          return nextProps.value % 2 == 0;
           // Change code above this line
         }
         componentDidUpdate() {
